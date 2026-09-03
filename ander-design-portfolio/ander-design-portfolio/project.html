@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start a Project — Ander Design</title>
+<meta name="description" content="Start a project with Ander Design — visual identity, logo design, and social media systems for small brands.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-field" aria-hidden="true">
+  <div class="grid-lines"></div>
+  <span class="reg-mark reg-tl">+</span>
+  <span class="reg-mark reg-tr">+</span>
+  <span class="reg-mark reg-bl">+</span>
+  <span class="reg-mark reg-br">+</span>
+</div>
+
+<!-- ============ NAV (same as index.html) ============ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Ander Design — home">
+      <img src="assets/logo.png" alt="Ander Design" class="logo-img"
+           onerror="this.closest('.logo').classList.add('logo-fallback')">
+      <span class="logo-fallback-text" aria-hidden="true">Add<br>assets/logo.png</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html#work" class="nav-link">Work</a>
+      <a href="index.html#services" class="nav-link">Services</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <a href="index.html#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+        <span class="lang-option" data-lang-option="en">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-option" data-lang-option="ar">عربي</span>
+      </button>
+
+      <a href="index.html#contact" class="btn btn-primary btn-small header-cta" data-i18n="headerCta">Let's Talk</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ PROJECT FORM ============ -->
+  <section class="project-hero">
+    <p class="section-label reveal"><span>06</span> — Contact</p>
+    <h1 class="reveal">Start a Project.</h1>
+    <p class="reveal" data-i18n="projectSub">Tell me about your brand and what you need — I'll get back to you within a day.</p>
+  </section>
+
+  <section class="project-form-section">
+    <form class="project-form reveal" id="projectForm" novalidate>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="fullName" data-i18n="labelFullName">Full Name</label>
+          <input type="text" id="fullName" name="fullName" required autocomplete="name">
+        </div>
+        <div class="form-field">
+          <label for="email" data-i18n="labelEmailField">Email Address</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="service" data-i18n="labelService">Select a Service</label>
+        <select id="service" name="service" required>
+          <option value="Brand Identity">Brand Identity</option>
+          <option value="Logo Design">Logo Design</option>
+          <option value="Social Media Design">Social Media Design</option>
+          <option value="Product Advertising">Product Advertising</option>
+          <option value="Print & Flyers">Print &amp; Flyers</option>
+          <option value="Visual Direction">Visual Direction</option>
+          <option value="Video Editing">Video Editing</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label data-i18n="labelBudget">Project Budget</label>
+        <div class="budget-options" role="radiogroup" aria-label="Project budget">
+          <label class="budget-option">
+            <input type="radio" name="budget" value="Under $50">
+            <span data-i18n="budgetUnder50">Under $50</span>
+          </label>
+          <label class="budget-option">
+            <input type="radio" name="budget" value="$50 - $150">
+            <span data-i18n="budget50to150">$50 – $150</span>
+          </label>
+          <label class="budget-option">
+            <input type="radio" name="budget" value="$150 - $400">
+            <span data-i18n="budget150to400">$150 – $400</span>
+          </label>
+          <label class="budget-option">
+            <input type="radio" name="budget" value="$400+">
+            <span data-i18n="budget400plus">$400+</span>
+          </label>
+          <label class="budget-option">
+            <input type="radio" name="budget" value="Not sure yet" checked>
+            <span data-i18n="budgetUnsure">Not sure yet — let's discuss</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="details" data-i18n="labelDetails">Project Details</label>
+        <textarea id="details" name="details" required data-i18n-placeholder="placeholderDetails"
+                  placeholder="Tell me about your brand, your goals, and what you need…"></textarea>
+      </div>
+
+      <div class="form-submit">
+        <button type="submit" class="btn btn-primary btn-large" id="submitBtn">
+          <span data-i18n="btnSubmit" id="submitBtnLabel">Submit Request</span>
+          <span class="btn-arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </div>
+
+    </form>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="logo logo--small">
+      <img src="assets/logo.png" alt="Ander Design" class="logo-img"
+           onerror="this.closest('.logo').classList.add('logo-fallback')">
+      <span class="logo-fallback-text" aria-hidden="true">Add assets/logo.png</span>
+    </span>
+    <p>© <span id="year"></span> Ander Design — <span data-i18n="valueLocation">Oran, Algeria</span></p>
+    <a href="#top" class="footer-top" data-scroll data-i18n="backToTop">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp CTA -->
+<a href="https://wa.me/213542304480?text=Hi%20Ander%20Design%20%E2%80%94%20I%27d%20like%20to%20talk%20about%20a%20project."
+   target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+  <span data-i18n="whatsappFab">Chat on WhatsApp</span>
+</a>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+<script src="project.js"></script>
+</body>
+</html>
