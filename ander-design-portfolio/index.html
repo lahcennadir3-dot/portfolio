@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ander Design — Lahcen Nadir | Visual Identity, Oran</title>
+<meta name="description" content="Ander Design — visual identity, logo design, and social media systems for small brands. Founded by Lahcen Nadir, based in Oran, Algeria.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grid-field" aria-hidden="true">
+  <div class="grid-lines"></div>
+  <span class="reg-mark reg-tl">+</span>
+  <span class="reg-mark reg-tr">+</span>
+  <span class="reg-mark reg-bl">+</span>
+  <span class="reg-mark reg-br">+</span>
+</div>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+
+    <!--
+      Logo: real image, not simulated with CSS/text.
+      Put your logo file at assets/logo.png (or .svg — just update the
+      src below). Until it's there, a small neutral placeholder shows.
+    -->
+    <a href="#top" class="logo" aria-label="Ander Design — home">
+      <img src="assets/logo.png" alt="Ander Design" class="logo-img"
+           onerror="this.closest('.logo').classList.add('logo-fallback')">
+      <span class="logo-fallback-text" aria-hidden="true">Add<br>assets/logo.png</span>
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#work" class="nav-link">Work</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+        <span class="lang-option" data-lang-option="en">EN</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-option" data-lang-option="ar">عربي</span>
+      </button>
+
+      <a href="#contact" class="btn btn-primary btn-small header-cta" data-scroll data-i18n="headerCta" data-scroll>Let's Talk</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <p class="eyebrow reveal">Visual Identity · Brand Designer — Oran, Algeria</p>
+
+    <h1 class="hero-title reveal">
+      I don't just design logos.<br>
+      <em>I build clarity.</em>
+    </h1>
+
+    <p class="hero-sub reveal" data-i18n="heroSub">
+      Visual identity, logo systems, and social content that make small
+      brands look clear, credible, and easy to trust — from the first
+      glance.
+    </p>
+
+    <div class="hero-actions reveal">
+      <a href="#work" class="btn btn-primary" data-scroll>
+        <span data-i18n="btnSeeWork">See the Work</span>
+        <span class="btn-arrow" aria-hidden="true">↓</span>
+      </a>
+      <a href="project.html" class="btn btn-ghost">
+        <span data-i18n="btnStartProject">Start a Project</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <a href="#work" class="scroll-cue reveal" data-scroll aria-label="Scroll to work">
+      <span data-i18n="scrollCue">Scroll</span>
+      <span class="scroll-cue-line" aria-hidden="true"></span>
+    </a>
+  </section>
+
+  <!-- Skills marquee -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Brand Identity</span>
+      <span>Logo Design</span>
+      <span>Social Media Design</span>
+      <span>Product Advertising</span>
+      <span>Print &amp; Flyers</span>
+      <span>Visual Direction</span>
+    </div>
+    <div class="marquee-track">
+      <span>Brand Identity</span>
+      <span>Logo Design</span>
+      <span>Social Media Design</span>
+      <span>Product Advertising</span>
+      <span>Print &amp; Flyers</span>
+      <span>Visual Direction</span>
+    </div>
+  </div>
+
+  <!-- ============ 01 — SELECTED WORK ============ -->
+  <section class="work" id="work">
+    <div class="section-head reveal">
+      <p class="section-label"><span>01</span> — Selected Work</p>
+      <h2>Identity that gets remembered.</h2>
+      <p class="section-note" data-i18n="workNote">A focused set of identity systems and campaign visuals — not everything, just the work that matters.</p>
+    </div>
+
+    <div class="work-filters reveal" role="tablist" aria-label="Filter work by category">
+      <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="filter-btn" data-filter="identity" role="tab" aria-selected="false">Brand Identity</button>
+      <button class="filter-btn" data-filter="logo" role="tab" aria-selected="false">Logo Design</button>
+      <button class="filter-btn" data-filter="social" role="tab" aria-selected="false">Social &amp; Advertising</button>
+    </div>
+
+    <div class="work-grid" id="workGrid">
+
+      <!-- Project images: put files in assets/work/ using the filenames
+           below, or just change the src="" path on each <img>. -->
+
+      <article class="work-card reveal" data-category="identity">
+        <div class="work-media">
+          <img src="assets/work/boltex-nutrition.jpg" alt="Boltex Nutrition brand identity" loading="lazy"
+               onerror="this.closest('.work-media').classList.add('img-fallback')">
+          <div class="work-media-fallback" aria-hidden="true"><span>Boltex<br>Nutrition</span></div>
+          <span class="work-index">01 / 06</span>
+          <span class="work-tag">Brand Identity</span>
+        </div>
+        <div class="work-info">
+          <h3>Boltex Nutrition</h3>
+          <p class="work-role" data-i18n="work1Role">Brand Identity / Sports Nutrition</p>
+          <p class="work-desc" data-i18n="work1Desc">A bold identity system for a performance-focused supplement brand — strength, speed, and athletic energy in a sharp, modern visual language.</p>
+          <ul class="work-meta" data-i18n-list="work1Meta"><li>Black</li><li>White</li><li>Red</li><li>Bold Type</li></ul>
+          <a href="case-study-boltex.html" class="work-case-link" data-i18n="viewCaseStudy">View Case Study →</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-category="identity">
+        <div class="work-media">
+          <img src="assets/work/bibiya-baby-care.jpg" alt="Bibiya Baby Care packaging and brand identity" loading="lazy"
+               onerror="this.closest('.work-media').classList.add('img-fallback')">
+          <div class="work-media-fallback" aria-hidden="true"><span>Bibiya<br>Baby Care</span></div>
+          <span class="work-index">02 / 06</span>
+          <span class="work-tag">Brand Identity</span>
+        </div>
+        <div class="work-info">
+          <h3>Bibiya Baby Care</h3>
+          <p class="work-role" data-i18n="work2Role">Brand Identity / Packaging</p>
+          <p class="work-desc" data-i18n="work2Desc">A soft identity system for a baby-care brand — trust, comfort, and gentleness through pastel colors and clean, rounded forms.</p>
+          <ul class="work-meta" data-i18n-list="work2Meta"><li>Pastel Blue</li><li>Soft Pink</li><li>Rounded Forms</li></ul>
+          <a href="case-study-bibiya.html" class="work-case-link" data-i18n="viewCaseStudy">View Case Study →</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-category="logo">
+        <div class="work-media">
+          <img src="assets/work/book-space.jpg" alt="Book Space logo and visual identity" loading="lazy"
+               onerror="this.closest('.work-media').classList.add('img-fallback')">
+          <div class="work-media-fallback" aria-hidden="true"><span>Book<br>Space</span></div>
+          <span class="work-index">03 / 06</span>
+          <span class="work-tag">Logo Design</span>
+        </div>
+        <div class="work-info">
+          <h3>Book Space</h3>
+          <p class="work-role" data-i18n="work3Role">Logo Design / Visual Identity</p>
+          <p class="work-desc" data-i18n="work3Desc">A friendly identity for an educational brand — a simple mark, blue-orange palette, and readable type for print and digital.</p>
+          <ul class="work-meta" data-i18n-list="work3Meta"><li>Blue</li><li>Orange</li><li>Simple Icon</li></ul>
+          <a href="case-study-book-space.html" class="work-case-link" data-i18n="viewCaseStudy">View Case Study →</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-category="social">
+        <div class="work-media">
+          <img src="assets/work/fitness-campaign.jpg" alt="Fitness supplement social media campaign" loading="lazy"
+               onerror="this.closest('.work-media').classList.add('img-fallback')">
+          <div class="work-media-fallback" aria-hidden="true"><span>Fitness<br>Campaign</span></div>
+          <span class="work-index">04 / 06</span>
+          <span class="work-tag">Social &amp; Advertising</span>
+        </div>
+        <div class="work-info">
+          <h3>Fitness Supplement Campaign</h3>
+          <p class="work-role" data-i18n="work4Role">Social Media Campaign — Boltex Nutrition</p>
+          <p class="work-desc" data-i18n="work4Desc">Campaign visuals that carry the Boltex identity onto the feed — built for scroll-stopping contrast and clear offers.</p>
+          <ul class="work-meta" data-i18n-list="work4Meta"><li>Carousel</li><li>Offer Creative</li></ul>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-category="social">
+        <div class="work-media">
+          <img src="assets/work/baby-care-campaign.jpg" alt="Baby care awareness social media campaign" loading="lazy"
+               onerror="this.closest('.work-media').classList.add('img-fallback')">
+          <div class="work-media-fallback" aria-hidden="true"><span>Baby Care<br>Awareness</span></div>
+          <span class="work-index">05 / 06</span>
+          <span class="work-tag">Social &amp; Advertising</span>
+        </div>
+        <div class="work-info">
+          <h3>Baby Care Awareness Campaign</h3>
+          <p class="work-role" data-i18n="work5Role">Social Media Campaign — Bibiya Baby Care</p>
+          <p class="work-desc" data-i18n="work5Desc">A gentler content system built from the Bibiya identity — pastel palette, soft type, awareness-first messaging.</p>
+          <ul class="work-meta" data-i18n-list="work5Meta"><li>Post System</li><li>Brand Awareness</li></ul>
+        </div>
+      </article>
+
+      <article class="work-card reveal" data-category="social">
+        <div class="work-media">
+          <img src="assets/work/education-campaign.jpg" alt="Educational brand social media campaign" loading="lazy"
+               onerror="this.closest('.work-media').classList.add('img-fallback')">
+          <div class="work-media-fallback" aria-hidden="true"><span>Educational<br>Campaign</span></div>
+          <span class="work-index">06 / 06</span>
+          <span class="work-tag">Social &amp; Advertising</span>
+        </div>
+        <div class="work-info">
+          <h3>Educational Brand Campaign</h3>
+          <p class="work-role" data-i18n="work6Role">Social Media Campaign — Book Space</p>
+          <p class="work-desc" data-i18n="work6Desc">Friendly, readable content built on the Book Space system — made for parents and educators scrolling fast.</p>
+          <ul class="work-meta" data-i18n-list="work6Meta"><li>Content System</li><li>Print-Ready</li></ul>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="work-more reveal">
+      <span data-i18n="workMore">This is a focused selection.</span>
+      <a href="https://www.behance.net/anderdesignn" target="_blank" rel="noopener" data-i18n="workMoreLink">See the full archive on Behance ↗</a>
+    </p>
+  </section>
+
+  <!-- ============ 02 — SERVICES ============ -->
+  <section class="services" id="services">
+    <div class="section-head reveal">
+      <p class="section-label"><span>02</span> — Services</p>
+      <h2>What I design.</h2>
+    </div>
+
+    <ul class="services-list">
+      <li class="service-row service-row--featured reveal">
+        <span class="service-num">01</span>
+        <span class="service-name">Brand Identity<span class="service-badge" data-i18n="coreService">Core Service</span></span>
+        <span class="service-desc" data-i18n="service1Desc">Logo system, color palette, typography, visual elements, brand guidelines.</span>
+      </li>
+      <li class="service-row reveal">
+        <span class="service-num">02</span>
+        <span class="service-name">Social Media Design</span>
+        <span class="service-desc" data-i18n="service2Desc">Posts, carousels, campaign systems, content direction, editable templates.</span>
+      </li>
+      <li class="service-row reveal">
+        <span class="service-num">03</span>
+        <span class="service-name">Product Advertising</span>
+        <span class="service-desc" data-i18n="service3Desc">Product posters, offer creatives, visual ads for digital campaigns.</span>
+      </li>
+      <li class="service-row reveal">
+        <span class="service-num">04</span>
+        <span class="service-name">Print &amp; Flyers</span>
+        <span class="service-desc" data-i18n="service4Desc">Flyers, brochures, business cards, packaging and print-ready assets.</span>
+      </li>
+      <li class="service-row reveal">
+        <span class="service-num">05</span>
+        <span class="service-name">Visual Direction</span>
+        <span class="service-desc" data-i18n="service5Desc">Moodboards, layout direction, brand applications, creative supervision.</span>
+      </li>
+      <li class="service-row reveal">
+        <span class="service-num">06</span>
+        <span class="service-name">Video Editing</span>
+        <span class="service-desc" data-i18n="service6Desc">Short reels, motion layouts, ad-style edits, content repurposing.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ 03 — HOW I WORK ============ -->
+  <section class="terms" id="how-i-work">
+    <div class="section-head reveal">
+      <p class="section-label"><span>03</span> — How I Work</p>
+      <h2>Clear steps. No surprises.</h2>
+      <p class="section-note" data-i18n="termsNote">The rules every project runs on, agreed before any design starts.</p>
+    </div>
+
+    <!--
+      EDIT ME: the payment split, revision count, and turnaround below
+      are common freelance defaults — swap in your real numbers/policy
+      (in both the English text and the "termsX" keys in script.js).
+    -->
+    <div class="terms-grid">
+      <div class="terms-card reveal">
+        <span class="terms-icon" aria-hidden="true">01</span>
+        <h3>Brief &amp; Direction</h3>
+        <p data-i18n="terms1">Goals, audience, references, and visual direction — agreed before any design starts.</p>
+      </div>
+      <div class="terms-card reveal">
+        <span class="terms-icon" aria-hidden="true">02</span>
+        <h3>Payment</h3>
+        <p data-i18n="terms2">50% to start, 50% on delivery. Work begins once the deposit is received.</p>
+      </div>
+      <div class="terms-card reveal">
+        <span class="terms-icon" aria-hidden="true">03</span>
+        <h3>Revisions</h3>
+        <p data-i18n="terms3">2 rounds of revision included per project. Further rounds are quoted separately.</p>
+      </div>
+      <div class="terms-card reveal">
+        <span class="terms-icon" aria-hidden="true">04</span>
+        <h3>Timeline</h3>
+        <p data-i18n="terms4">Turnaround depends on project size — agreed and confirmed before we start.</p>
+      </div>
+      <div class="terms-card reveal">
+        <span class="terms-icon" aria-hidden="true">05</span>
+        <h3>Final Delivery</h3>
+        <p data-i18n="terms5">Exported files, ready for web, print, or social — organized and labeled.</p>
+      </div>
+      <div class="terms-card reveal">
+        <span class="terms-icon" aria-hidden="true">06</span>
+        <h3>After Delivery</h3>
+        <p data-i18n="terms6">Once the final files are approved and sent, the project closes. New changes are a new project.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 — ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-head reveal">
+      <p class="section-label"><span>04</span> — About</p>
+      <h2>The person behind the brand.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="about-lead" data-i18n="aboutLead">
+          I'm Lahcen Nadir — founder of Ander Design. I design visual
+          identities, brand systems, and social content that help
+          businesses look clear, credible, and consistent.
+        </p>
+        <p data-i18n="aboutPara2">
+          Most small brands don't need more content. They need a visual
+          system that gets remembered. That's the gap Ander Design fills:
+          identity and logo work, social systems, and advertising visuals
+          built with one goal — make the brand instantly recognizable and
+          easy to trust.
+        </p>
+
+        <!-- EDIT ME: adjust tools to match what you actually use -->
+        <div class="toolkit">
+          <span class="toolkit-label" data-i18n="toolkitLabel">Toolkit</span>
+          <ul>
+            <li>Adobe Illustrator</li>
+            <li>Adobe Photoshop</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="about-side reveal">
+        <!--
+          Real photo, framed with object-fit so it always fills the box
+          cleanly without stretching, whatever its original dimensions.
+        -->
+        <div class="hero-photo">
+          <img src="assets/profile.png" alt="Lahcen Nadir, founder of Ander Design" class="profile-img"
+               onerror="this.closest('.hero-photo').classList.add('img-fallback')">
+          <div class="hero-photo-fallback" aria-hidden="true">
+            <span>LN</span>
+            <small>add<br>assets/profile.png</small>
+          </div>
+        </div>
+
+        <ul class="stats-list">
+          <li><strong>10+</strong><span data-i18n="stat1">Brands Designed</span></li>
+          <li><strong>50+</strong><span data-i18n="stat2">Happy Clients</span></li>
+          <li><strong>24h</strong><span data-i18n="stat3">Avg. Response Time</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="section-head reveal">
+        <p class="section-label"><span>05</span> — Contact</p>
+        <h2>Got a brand to build?</h2>
+      </div>
+
+      <p class="contact-lead reveal" data-i18n="contactLead">
+        Available for freelance projects and visual collaborations —
+        identity systems, social content, and advertising visuals.
+        I reply within a day.
+      </p>
+
+      <div class="contact-grid reveal">
+        <div class="contact-block">
+          <span class="contact-label" data-i18n="labelEmail">Email</span>
+          <a href="mailto:anderdesignn@gmail.com" class="contact-value">anderdesignn@gmail.com</a>
+        </div>
+        <div class="contact-block">
+          <span class="contact-label" data-i18n="labelPhone">Phone / WhatsApp</span>
+          <a href="https://wa.me/213542304480" target="_blank" rel="noopener" class="contact-value">0542 30 44 80</a>
+        </div>
+        <div class="contact-block">
+          <span class="contact-label" data-i18n="labelLocation">Location</span>
+          <span class="contact-value" data-i18n="valueLocation">Oran, Algeria</span>
+        </div>
+        <div class="contact-block">
+          <span class="contact-label" data-i18n="labelElsewhere">Elsewhere</span>
+          <div class="contact-socials">
+            <a href="https://www.behance.net/anderdesignn" target="_blank" rel="noopener">Behance ↗</a>
+            <a href="https://www.instagram.com/ander_designn/" target="_blank" rel="noopener">Instagram ↗</a>
+            <a href="https://www.facebook.com/anderedits" target="_blank" rel="noopener">Facebook ↗</a>
+            <a href="https://www.linkedin.com/in/ander-design-341a5623b/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <a href="project.html" class="btn btn-primary btn-large reveal">
+        <span data-i18n="btnStartProject">Start a Project</span>
+        <span class="btn-arrow" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="logo logo--small">
+      <img src="assets/logo.png" alt="Ander Design" class="logo-img"
+           onerror="this.closest('.logo').classList.add('logo-fallback')">
+      <span class="logo-fallback-text" aria-hidden="true">Add assets/logo.png</span>
+    </span>
+    <p>© <span id="year"></span> Ander Design — <span data-i18n="valueLocation">Oran, Algeria</span></p>
+    <a href="#top" class="footer-top" data-scroll data-i18n="backToTop">Back to top ↑</a>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp CTA -->
+<a href="https://wa.me/213542304480?text=Hi%20Ander%20Design%20%E2%80%94%20I%27d%20like%20to%20talk%20about%20a%20project."
+   target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+  <span data-i18n="whatsappFab">Chat on WhatsApp</span>
+</a>
+
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
