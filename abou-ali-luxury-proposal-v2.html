@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abou Ali — عرض فاخر • Ander Design</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Playfair+Display:wght@600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--espresso:#1A0F0A;--espresso2:#241915;--walnut:#3D2416;--gold:#C89B4A;--gold2:#D4AF37;--goldLight:#E8C47A;--ivory:#F4EBDD;--ivory2:#FFF8ED;--muted:#C9B99A;--muted2:#8A7D6B;--line:rgba(200,155,74,0.14);--line2:rgba(200,155,74,0.28)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Tajawal",sans-serif;background:var(--espresso);color:var(--ivory);line-height:1.75;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.serif{font-family:"Playfair Display","Cormorant Garamond",serif}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+@media(max-width:640px){.container{padding:0 18px}}
+/* NAV - luxury */
+.nav{position:fixed;top:0;left:0;right:0;z-index:30;background:rgba(26,15,10,0.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{width:38px;height:38px;border:1px solid var(--gold);display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:700;font-size:13px;color:var(--gold);background:linear-gradient(135deg, rgba(200,155,74,0.18), rgba(200,155,74,0.04))}
+.logo-text{line-height:1.2}
+.logo-text b{font-size:11px;letter-spacing:0.16em;color:var(--ivory);display:block}
+.logo-text span{font-size:10px;color:var(--muted2);letter-spacing:0.06em}
+.nav-cta{padding:10px 18px;background:var(--gold);color:var(--espresso);font-weight:800;font-size:12px;letter-spacing:0.04em;border:1px solid var(--gold);transition:0.2s}
+.nav-cta:hover{background:var(--goldLight);transform:translateY(-1px)}
+/* HERO - full luxury */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 24px 70px;overflow:hidden;background:radial-gradient(900px 600px at 50% 0%, rgba(200,155,74,0.18), transparent 60%), linear-gradient(180deg, #241915 0%, #1A0F0A 100%)}
+.hero-bg{position:absolute;inset:0;opacity:0.07;background-image:repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(200,155,74,0.08) 40px), repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(200,155,74,0.05) 40px);pointer-events:none}
+.hero::after{content:"";position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent);opacity:0.5}
+.hero-inner{position:relative;max-width:860px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:10px;letter-spacing:0.22em;color:var(--gold);border:1px solid var(--line2);padding:8px 16px;background:rgba(200,155,74,0.08);backdrop-filter:blur(6px)}
+.eyebrow i{width:6px;height:6px;background:var(--gold);border-radius:50%;box-shadow:0 0 10px var(--gold)}
+.hero h1{margin-top:22px;font-family:"Playfair Display",serif;font-size:clamp(32px, 5.5vw, 58px);line-height:1.1;font-weight:700;letter-spacing:-0.01em}
+.hero h1 span{color:var(--gold);font-style:italic;font-weight:600}
+.hero h1 em{font-family:"Tajawal",sans-serif;font-style:normal;font-weight:800;color:var(--ivory);display:block;font-size:0.62em;margin-top:8px;letter-spacing:0}
+.hero p{margin-top:18px;color:var(--muted);font-size:15.5px;max-width:62ch;margin-left:auto;margin-right:auto}
+.hero p b{color:var(--ivory)}
+.hero-actions{margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{ display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;font-size:14px;font-weight:800;letter-spacing:0.02em;border:1px solid transparent;transition:0.25s;cursor:pointer}
+.btn-gold{background:linear-gradient(135deg, var(--gold), var(--gold2));color:var(--espresso);box-shadow:0 8px 30px rgba(200,155,74,0.25);border-color:var(--gold)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(200,155,74,0.35);background:linear-gradient(135deg, var(--goldLight), var(--gold))}
+.btn-ghost{border-color:rgba(244,235,221,0.18);color:var(--ivory);background:rgba(244,235,221,0.06);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--gold);color:var(--gold);background:rgba(200,155,74,0.08)}
+.trust{margin-top:28px;display:flex;gap:18px;justify-content:center;flex-wrap:wrap;font-size:11px;color:var(--muted2);letter-spacing:0.06em}
+.trust span{display:flex;align-items:center;gap:6px}
+.trust i{color:var(--gold)}
+/* VISUAL SHOWCASE - concept image */
+.showcase{padding:0;background:#0F0A07;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden}
+.showcase-inner{display:grid;grid-template-columns:1.15fr 0.85fr;gap:0;align-items:stretch;max-width:1180px;margin:0 auto}
+@media(max-width:880px){.showcase-inner{grid-template-columns:1fr}}
+.showcase-img{position:relative;background:#0F0A07;overflow:hidden;min-height:520px}
+.showcase-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;filter:saturate(1.05) contrast(1.02)}
+.showcase-img::after{content:"";position:absolute;inset:0;border:1px solid rgba(200,155,74,0.18);pointer-events:none;margin:12px}
+.showcase-info{padding:46px 36px;background:linear-gradient(180deg, #241915, #1A0F0A);border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+@media(max-width:880px){.showcase-info{border-right:none;border-top:1px solid var(--line)}}
+.kicker{font-size:10px;letter-spacing:0.18em;color:var(--gold);font-weight:700}
+.showcase-info h2{margin-top:10px;font-family:"Playfair Display",serif;font-size:28px;line-height:1.2;font-weight:700}
+.showcase-info h2 span{color:var(--gold);font-style:italic}
+.showcase-info p{margin-top:12px;color:var(--muted);font-size:13.5px}
+.palette{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.swatch{width:54px;text-align:center}
+.swatch i{display:block;width:54px;height:54px;border-radius:50%;border:2px solid rgba(244,235,221,0.12);box-shadow:0 4px 18px rgba(0,0,0,0.4)}
+.swatch span{margin-top:6px;display:block;font-size:10px;letter-spacing:0.06em;color:var(--muted2);line-height:1.3}
+.swatch b{display:block;color:var(--ivory);font-size:10px}
+/* SECTIONS */
+.section{padding:76px 0;border-top:1px solid var(--line)}
+.section.alt{background:linear-gradient(180deg, rgba(200,155,74,0.04), transparent)}
+.label{font-size:10px;letter-spacing:0.18em;color:var(--gold);font-weight:800;display:flex;align-items:center;gap:10px}
+.label::before{content:"";width:28px;height:1px;background:var(--gold)}
+.section h2{margin-top:12px;font-family:"Playfair Display",serif;font-size:clamp(26px, 3.5vw, 36px);line-height:1.2;font-weight:700}
+.section h2 span{color:var(--gold);font-style:italic}
+.lead{margin-top:12px;color:var(--muted);font-size:14.8px;max-width:68ch}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.card{position:relative;border:1px solid var(--line);background:linear-gradient(180deg, rgba(244,235,221,0.04), rgba(244,235,221,0.01));padding:22px 20px;overflow:hidden}
+.card::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, rgba(200,155,74,0.5), transparent);opacity:0.6}
+.card h3{font-size:14px;font-weight:800;display:flex;align-items:center;gap:8px}
+.card h3 i{width:28px;height:28px;display:grid;place-items:center;background:rgba(200,155,74,0.12);border:1px solid var(--line2);color:var(--gold);font-style:normal;font-size:12px}
+.card p{margin-top:8px;font-size:13.5px;color:var(--muted)}
+.card ul{margin-top:14px;list-style:none;display:grid;gap:8px}
+.card li{font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.card li::before{content:"✦";color:var(--gold);font-size:10px;margin-top:2px}
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+@media(max-width:900px){.pillars{grid-template-columns:1fr}}
+.pillar{position:relative;border:1px solid var(--line2);background:radial-gradient(600px 300px at 50% 0%, rgba(200,155,74,0.08), transparent 60%), linear-gradient(180deg, rgba(36,25,21,0.9), rgba(26,15,10,0.9));padding:26px 22px;overflow:hidden}
+.pillar::after{content:"";position:absolute;inset:0;border:1px solid rgba(200,155,74,0.08);pointer-events:none;margin:6px}
+.pillar-num{font-family:"Cormorant Garamond",serif;font-size:12px;letter-spacing:0.2em;color:var(--gold);font-weight:700}
+.pillar h3{margin-top:8px;font-family:"Playfair Display",serif;font-size:17px;font-weight:700;color:var(--ivory)}
+.pillar p{margin-top:8px;font-size:12.8px;color:var(--muted)}
+.pillar ul{margin-top:16px;list-style:none;display:grid;gap:9px}
+.pillar li{font-size:12.8px;color:var(--ivory);display:flex;gap:10px}
+.pillar li::before{content:"✓";color:var(--gold);font-weight:800;background:rgba(200,155,74,0.12);width:18px;height:18px;display:grid;place-items:center;border-radius:50%;font-size:10px;flex-shrink:0;margin-top:1px}
+/* PACKAGES - luxury */
+.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px;align-items:start}
+@media(max-width:980px){.packages{grid-template-columns:1fr;max-width:520px;margin-left:auto;margin-right:auto}}
+.pkg{position:relative;border:1px solid var(--line);background:linear-gradient(180deg, rgba(244,235,221,0.03), rgba(244,235,221,0.01));padding:28px 22px;display:flex;flex-direction:column;overflow:hidden}
+.pkg::before{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg, transparent, var(--line2), transparent)}
+.pkg.featured{border-color:var(--gold);background:linear-gradient(180deg, rgba(200,155,74,0.11), rgba(36,25,21,0.6));box-shadow:0 20px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(200,155,74,0.18) inset;transform:translateY(-6px)}
+@media(max-width:980px){.pkg.featured{transform:none}}
+.pkg.featured::before{background:linear-gradient(90deg, transparent, var(--gold), transparent);height:2px}
+.badge-pop{position:absolute;top:16px;left:16px;background:var(--gold);color:var(--espresso);font-size:10px;font-weight:800;letter-spacing:0.12em;padding:6px 10px;box-shadow:0 4px 14px rgba(200,155,74,0.3)}
+.pkg-name{font-size:10px;letter-spacing:0.18em;color:var(--gold);font-weight:800}
+.pkg-title{margin-top:8px;font-family:"Playfair Display",serif;font-size:18px;font-weight:700;line-height:1.2}
+.pkg-desc{margin-top:8px;font-size:12px;color:var(--muted2);min-height:34px}
+.price{margin-top:18px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.price strong{font-size:30px;font-weight:800;letter-spacing:-0.02em}
+.price small{font-size:12px;color:var(--muted2)}
+.pkg ul{margin-top:18px;list-style:none;display:grid;gap:9px;flex:1}
+.pkg li{font-size:12.8px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+.pkg li.on{color:var(--ivory)}
+.pkg li::before{content:"";width:8px;height:8px;border:1px solid var(--gold);border-radius:50%;margin-top:6px;flex-shrink:0}
+.pkg li.on::before{background:var(--gold);box-shadow:0 0 8px rgba(200,155,74,0.4)}
+.pkg li.off{opacity:0.38}
+.pkg .btn{margin-top:18px;width:100%;padding:14px}
+.pkg-note{margin-top:10px;font-size:11px;color:var(--muted2);text-align:center}
+.advice{margin-top:18px;padding:16px 18px;border:1px solid var(--line2);background:linear-gradient(90deg, rgba(200,155,74,0.08), rgba(200,155,74,0.02));display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.advice p{font-size:12.5px;color:var(--muted)}
+.advice b{color:var(--gold)}
+/* ROI */
+.roi{display:grid;grid-template-columns:1.1fr 0.9fr;gap:18px;margin-top:26px}
+@media(max-width:880px){.roi{grid-template-columns:1fr}}
+.roi-card{border:1px solid var(--line2);background:linear-gradient(135deg, rgba(200,155,74,0.08), rgba(36,25,21,0.5));padding:24px}
+.roi-card h4{font-family:"Playfair Display",serif;font-size:15px;color:var(--gold)}
+.roi-card ul{margin-top:14px;list-style:none;display:grid;gap:10px}
+.roi-card li{font-size:13px;color:var(--muted);display:flex;gap:10px}
+.roi-card li::before{content:"＋";color:var(--gold);font-weight:800}
+.quote{border:1px solid var(--line);background:radial-gradient(600px 300px at 50% 0%, rgba(244,235,221,0.04), transparent 60%), rgba(244,235,221,0.02);padding:26px;text-align:center}
+.quote blockquote{font-family:"Playfair Display",serif;font-size:18px;line-height:1.6;color:var(--ivory);font-style:italic}
+.quote p{margin-top:12px;font-size:13px;color:var(--muted)}
+/* TIMELINE */
+.timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:26px}
+@media(max-width:760px){.timeline{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.timeline{grid-template-columns:1fr}}
+.step{position:relative;border:1px solid var(--line);background:rgba(244,235,221,0.02);padding:20px;overflow:hidden}
+.step::before{content:"";position:absolute;top:0;left:0;width:100%;height:1px;background:linear-gradient(90deg, var(--gold), transparent)}
+.step span{font-size:10px;letter-spacing:0.16em;color:var(--gold);font-weight:800}
+.step h4{margin-top:8px;font-size:14px;font-weight:800}
+.step p{margin-top:8px;font-size:12.5px;color:var(--muted)}
+/* CTA - luxury */
+.cta{position:relative;padding:70px 24px;text-align:center;background:radial-gradient(900px 500px at 50% 0%, rgba(200,155,74,0.12), transparent 60%), linear-gradient(180deg, #241915, #1A0F0A);border-top:1px solid var(--line2);overflow:hidden}
+.cta::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent)}
+.cta h2{font-family:"Playfair Display",serif;font-size:clamp(26px, 3.5vw, 36px);font-weight:700;line-height:1.2}
+.cta h2 span{color:var(--gold);font-style:italic}
+.cta p{max-width:62ch;margin:14px auto 0;color:var(--muted);font-size:14px}
+.cta-actions{margin-top:28px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.footer{padding:20px 24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;border-top:1px solid var(--line);font-size:11px;color:var(--muted2);background:var(--espresso2)}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">A</div>
+      <div class="logo-text"><b>ANDER DESIGN</b><span>Lahcen Nadir — Oran</span></div>
+    </div>
+    <a href="#packages" class="nav-cta">عرض الباقات ↓</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <div class="eyebrow"><i></i> ABOU ALI — HOME TEXTILES • AIN TÉMOUCHENT</div>
+    <h1>من محل يبيع الستائر<br><span>إلى عنوان للفخامة</span><em>في كل بيت</em></h1>
+    <p>عندك القماش الفاخر وثقة الزبون داخل المحل. ما ينقصك إلا <b>صورة تبيع قبل أن يلمس القماش</b> — نحافظ على شعارك 100% ونبني حوله حضورًا يُحكى عنه.</p>
+    <div class="hero-actions">
+      <a href="#packages" class="btn btn-gold">اكتشف الباقات — من 65,000 دج</a>
+      <a href="https://wa.me/213542304480?text=سلام%20لحسن%20—%20شفت%20عرض%20أبو%20علي" target="_blank" class="btn btn-ghost">تحدث على واتساب →</a>
+    </div>
+    <div class="trust">
+      <span><i>✓</i> نحافظ على شعارك الأصلي</span>
+      <span><i>✓</i> هوية دافئة فاخرة</span>
+      <span><i>✓</i> محتوى + إدارة كاملة</span>
+    </div>
+  </div>
+</section>
+
+<section class="showcase">
+  <div class="showcase-inner">
+    <div class="showcase-img">
+      <img src="abo-ali-identity-concept.png" alt="Abou Ali Luxury Concept - storefront and social mockups" loading="lazy">
+    </div>
+    <div class="showcase-info">
+      <div class="kicker">VISUAL DIRECTION — تصور أولي</div>
+      <h2>نفس شعارك،<br><span>بثوب أرقى</span></h2>
+      <p>الهيبة الغامقة تبقى، لكنها تصبح أدفأ وأوضح. هذا تطبيق مباشر لشعارك الحالي على واجهة المحل، المنشورات، والكتالوغ — بدون إعادة رسم، فقط إحساس فاخر.</p>
+      <div class="palette">
+        <div class="swatch"><i style="background:#241915"></i><span><b>ESPRESSO</b>#241915</span></div>
+        <div class="swatch"><i style="background:#4A2F25"></i><span><b>WALNUT</b>#4A2F25</span></div>
+        <div class="swatch"><i style="background:#C89B4A"></i><span><b>WARM GOLD</b>#C89B4A</span></div>
+        <div class="swatch"><i style="background:#F4EBDD"></i><span><b>SILK IVORY</b>#F4EBDD</span></div>
+      </div>
+      <p style="margin-top:14px;font-size:11px;color:var(--muted2)">أو لوحتك المفضلة Navy/Gold/Ivory — نفس الروح، هيبة أغمق.</p>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <section class="section">
+    <div class="label">01 — التشخيص</div>
+    <h2>الجودة موجودة، <span>لكن الصورة لا تعكسها</span></h2>
+    <p class="lead">الزبون يرى الفخامة داخل المحل، لكنه يرى فوضى ألوان على الهاتف. النتيجة: يفاوض كثير أو يذهب لمن يبدو أغلى.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3><i>✗</i> قبل</h3>
+        <p>ما يراه الزبون اليوم:</p>
+        <ul>
+          <li>خلفية سوداء ثقيلة لا تُقرأ في الهاتف</li>
+          <li>كل منشور بلون وخط مختلف</li>
+          <li>تصوير عشوائي بدون إضاءة موحدة</li>
+          <li>نشر وقت الفراغ بدون تقويم ولا رد سريع</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3><i style="background:rgba(200,155,74,0.18);color:var(--gold);border-color:var(--line2)">✓</i> بعد</h3>
+        <p>ما سيراه بعد 4 أسابيع:</p>
+        <ul>
+          <li>نفس شعارك على خلفية دافئة تُقرأ بوضوح</li>
+          <li>قوالب موحدة — يعرف منشورك فورًا</li>
+          <li>نفس الزاوية والإضاءة — القماش يبدو غاليًا</li>
+          <li>تقويم + إدارة يومية + رد يحول السؤال لزيارة</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="label">02 — ماذا سنفعل</div>
+    <h2>ثلاثة أعمدة — <span>نثبت، نصنع، نحول</span></h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <h3>نثبت صورتك</h3>
+        <p>تطوير الهوية حول شعارك — بدون إعادة رسم.</p>
+        <ul>
+          <li>Brand Board نهائي + قواعد الاستعمال</li>
+          <li>واجهة + كارت + فاتورة + ختم + كيس/ستيكر</li>
+          <li>غلاف + بروفايل فيسبوك/إنستا</li>
+          <li>دليل PDF لأي مطبعة</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <h3>نصنع محتوى يبدو غاليًا</h3>
+        <p>نظام يجعل القماش يتحدث وحده.</p>
+        <ul>
+          <li>6-10 قوالب PSD — عروض، جديد، قبل/بعد</li>
+          <li>دليل تصوير: زوايا + إضاءة + تعديل موحد</li>
+          <li>ريلز 15-30ث + ستوري يوميات المحل</li>
+          <li>وصف + هاشتاغ بلهجة راقية</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <h3>نحول المتابع لزبون</h3>
+        <p>النشر وحده لا يكفي.</p>
+        <ul>
+          <li>تقويم شهري + نشر مجدول 3-5/أسبوع</li>
+          <li>إدارة تعليقات ورسائل برد سريع</li>
+          <li>تقرير شهري + ما نحسن</li>
+          <li>توجيه حملة ممولة (تصميم + إعداد)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="packages">
+    <div class="label">03 — الاستثمار</div>
+    <h2>ثلاث باقات — <span>نفس الهوية، فرق في السرعة</span></h2>
+    <p class="lead">نبدأ من <b style="color:var(--ivory)">65,000 دج</b>. الوسطى هي الأكثر طلبًا — توازن مثالي.</p>
+    <div class="packages">
+      <div class="pkg">
+        <div class="pkg-name">PACK VITRINE</div>
+        <div class="pkg-title">الانطلاقة الراقية</div>
+        <div class="pkg-desc">تثبيت صورة محترفة والبدء بهدوء.</div>
+        <div class="price"><strong>65,000</strong> <small>دج / شهر</small></div>
+        <div style="font-size:11px;color:var(--muted2)">التزام 3 أشهر • ≈ 6.5 مليون</div>
+        <ul>
+          <li class="on">Brand Board + غلاف + بروفايل + كارت + ختم</li>
+          <li class="on">12 منشور + 4 ستوري / شهر</li>
+          <li class="on">6 قوالب PSD</li>
+          <li class="on">تقويم + جدولة</li>
+          <li class="on">إدارة 3 أيام/أسبوع</li>
+          <li class="off">بدون ريلز</li>
+          <li class="off">بدون حملة</li>
+        </ul>
+        <a href="https://wa.me/213542304480?text=مهتم%20بـ%20Vitrine%2065k" class="btn btn-ghost">اختيار Vitrine</a>
+        <div class="pkg-note">القيمة منفصلة 89,000 دج</div>
+      </div>
+      <div class="pkg featured">
+        <div class="badge-pop">★ الأكثر طلباً</div>
+        <div class="pkg-name">PACK CONFIANCE</div>
+        <div class="pkg-title">الانتشار والثقة</div>
+        <div class="pkg-desc">حضور يومي يبني ثقة ويجلب رسائل كل أسبوع.</div>
+        <div class="price"><strong style="color:var(--gold)">95,000</strong> <small>دج / شهر</small></div>
+        <div style="font-size:11px;color:var(--gold)">توفر 23,000 • ≈ 9.5 مليون • القيمة 118,000</div>
+        <ul>
+          <li class="on">هوية كاملة + فاتورة + كيس + ستيكر</li>
+          <li class="on"><b>20 منشور + 8 ستوري + 2 ريلز</b></li>
+          <li class="on"><b>10 قوالب PSD + دليل تصوير</b></li>
+          <li class="on"><b>إدارة يومية 6/7</b></li>
+          <li class="on"><b>حملة ممولة / شهر</b></li>
+          <li class="on"><b>تقرير شهري + اجتماع</b></li>
+        </ul>
+        <a href="https://wa.me/213542304480?text=مهتم%20بـ%20Confiance%2095k" class="btn btn-gold">★ اختيار Confiance</a>
+      </div>
+      <div class="pkg">
+        <div class="pkg-name">PACK SIGNATURE</div>
+        <div class="pkg-title">مرجع المنطقة</div>
+        <div class="pkg-desc">لمن يريد السيطرة — كاتالوغ + حضور كثيف.</div>
+        <div class="price"><strong>135,000</strong> <small>دج / شهر</small></div>
+        <div style="font-size:11px;color:var(--muted2)">≈ 13.5 مليون • القيمة 172,000</div>
+        <ul>
+          <li class="on"><b>30 منشور + 12 ستوري + 4 ريلز</b></li>
+          <li class="on"><b>كاتالوغ 12 صفحة</b></li>
+          <li class="on"><b>3 حملات ممولة</b></li>
+          <li class="on">جلسة تصوير موجهة + بنك صور</li>
+          <li class="on">إدارة 7/7 — رد &lt;3 ساعات</li>
+        </ul>
+        <a href="https://wa.me/213542304480?text=مهتم%20بـ%20Signature%20135k" class="btn btn-ghost">اختيار Signature</a>
+      </div>
+    </div>
+    <div class="advice">
+      <p>★★★★★ <b>نصيحتي:</b> ابدأ بـ <b>Confiance 95,000</b> — الفرق 30,000 يرجع في أول زبونين. Vitrine يثبت، Confiance يبيع.</p>
+      <span style="font-size:11px;color:var(--muted2)">الدفع 50% للانطلاق • 50% بعد التسليم • انطلاق 48 ساعة</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="label">04 — لماذا استثمار؟</div>
+    <h2>صورة أغلى = <span>تفاوض أقل</span></h2>
+    <div class="roi">
+      <div class="roi-card">
+        <h4>ماذا يربح المحل؟</h4>
+        <ul>
+          <li>زبون يثق قبل أن يزور — يسأل وهو مقتنع</li>
+          <li>تتوقف عن خسارة من يذهب لمن يبدو أفخم</li>
+          <li>محتوى جاهز تنشر حتى وأنت مشغول</li>
+          <li>رسائل أكثر = مواعيد قياس أكثر</li>
+          <li>هوية تبقى سنوات</li>
+        </ul>
+        <p style="margin-top:16px;background:var(--espresso2);border:1px solid var(--line2);padding:10px;font-size:12px;color:var(--gold);text-align:center">مثال: زبونان × 35,000 دج = 70,000 دج — الباقة تخلص نفسها.</p>
+      </div>
+      <div class="quote">
+        <blockquote>“ما نبيعلك تصاميم.<br>نبيعلك ثقة.”</blockquote>
+        <p>الفرق بين محل يبيع ستائر ومحل يبيع بيت أحلام هو الصورة. أبو علي عنده القماش — بقيت الصورة التي تجعل الزبون يقول: <b>هذا هو المحل.</b></p>
+        <p style="color:var(--gold);font-size:11px;letter-spacing:0.06em">— Lahcen Nadir, Ander Design</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="label">05 — كيف نمشي</div>
+    <h2>4 أسابيع إلى <span>نظام جاهز</span></h2>
+    <div class="timeline">
+      <div class="step"><span>01</span><h4>تثبيت الهوية</h4><p>Brand Board + واجهة + غلاف/بروفايل. موافقة.</p></div>
+      <div class="step"><span>02</span><h4>بناء النظام</h4><p>قوالب + دليل تصوير + 10 منشورات + تقويم.</p></div>
+      <div class="step"><span>03</span><h4>الإطلاق</h4><p>نشر مجدول + ستوري يومية + إدارة + ريلز.</p></div>
+      <div class="step"><span>04</span><h4>التحسين</h4><p>تقرير أداء + تحسين + تجهيز الشهر القادم.</p></div>
+    </div>
+  </section>
+</div>
+
+<section class="cta">
+  <h2>جاهز تشوف أبو علي <span>بصورة تليق بجودته؟</span></h2>
+  <p>اختر الباقة ونثبتها في 10 دقائق. الأماكن محدودة — نخدم مع عدد قليل لضمان الجودة.</p>
+  <div class="cta-actions">
+    <a href="https://wa.me/213542304480?text=سلام%20لحسن%20—%20قريت%20عرض%20أبو%20علي%20وحاب%20نثبت" target="_blank" class="btn btn-gold" style="min-width:260px">✓ نثبت على واتساب</a>
+    <a href="tel:+213542304480" class="btn btn-ghost" style="min-width:180px">📞 0542 30 44 80</a>
+  </div>
+  <p style="margin-top:16px;font-size:11px;color:var(--muted2)">صالح حتى 24 أكتوبر 2026 • شعارك يبقى كما هو 100%</p>
+</section>
+
+<footer class="footer">
+  <span>ANDER DESIGN — Lahcen Nadir • Oran</span>
+  <span>anderdesignn@gmail.com • behance.net/anderdesignn</span>
+</footer>
+
+</body>
+</html>
